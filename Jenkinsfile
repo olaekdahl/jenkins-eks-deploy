@@ -5,11 +5,11 @@ pipeline {
     }
     stages {
          stage('Clone repository') { 
-            steps { 
-                script{
-                checkout scm
-                }
-            }
+            // steps { 
+            //     script{
+            //     checkout scm
+            //     }
+            // }
         }
 
         stage('Build') { 
