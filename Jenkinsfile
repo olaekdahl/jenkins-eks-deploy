@@ -40,7 +40,8 @@ pipeline {
                 // sh 'kubectl config use-context ola-admin@jenkins-cluster.us-west-1.eksctl.io'
                 withAWS(credentials:'aws-credentials') {
                     sh 'aws eks update-kubeconfig --region us-west-1 --name jenkins-cluster'
-                    sh 'kubectl apply -f deployment.yml'
+                    sh 'kubectl apply -f deployment.yaml'
+                    sh 'kubectl apply -f service.yaml'
                 }
             }
         }
