@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: underwater-app-jenkins 
+  name: octopus-underwater-app 
   labels:
     app: octopus-underwater-app
 spec:
