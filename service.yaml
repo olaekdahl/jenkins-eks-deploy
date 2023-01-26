@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: octopus-service-loadbalancer
+  name: octopus-underwater-service
 spec:
-  type: LoadBalancer
-  selector:
-    app: octopus-underwater-app
   ports:
-    - protocol: TCP
-      port: 80
+    - port: 80
       targetPort: 80
+      protocol: TCP
+  type: NodePort
+  selector:
+    app.kubernetes.io/name: octopus-underwater-app
