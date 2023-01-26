@@ -48,4 +48,9 @@ helm install aws-load-balancer-controller eks/aws-load-balancer-controller \
     -n kube-system
 ```
 ## Jenkins plug-ins
-TODO
+- Amazon ECR
+- CloudBees AWS Credentials
+- Docker Pipeline
+- AWS Steps
+
+Add AWS credentials in Jenkins
