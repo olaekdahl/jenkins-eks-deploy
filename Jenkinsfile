@@ -36,7 +36,8 @@ pipeline {
         }
         stage('Deploy'){
             steps {
-                 sh 'kubectl apply -f deployment.yml'
+                sh 'kubectl config use-context ola-admin@jenkins-cluster.us-west-1.eksctl.io'
+                sh 'kubectl apply -f deployment.yml'
             }
         }
 
