@@ -38,10 +38,11 @@ pipeline {
             steps {
                 // sh 'kubectl config get-contexts'
                 // sh 'kubectl config use-context ola-admin@jenkins-cluster.us-west-1.eksctl.io'
-                sh 'aws eks update-kubeconfig --region us-west-1 --name jenkins-cluster'
-                sh 'kubectl apply -f deployment.yml'
+                withAWS(credentials:'aws-credentials') {
+                    sh 'aws eks update-kubeconfig --region us-west-1 --name jenkins-cluster'
+                    sh 'kubectl apply -f deployment.yml'
+                }
             }
         }
-
     }
 }
