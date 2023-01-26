@@ -3,11 +3,12 @@
 This app is a simple web application that displays relevant resources for users that have completed their first deployment. It contains an underwater scene and links to blog post.
 
 ## Create cluster
+```
 eksctl create cluster \
 --name jenkins-cluster \
 --region us-west-1 \
 --fargate
-
+```
 ## Setup Load Balancer (ALB)
 https://aws.amazon.com/premiumsupport/knowledge-center/eks-alb-ingress-controller-fargate/
 
