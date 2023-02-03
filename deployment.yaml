@@ -6,7 +6,7 @@ spec:
   selector:
     matchLabels:
         app.kubernetes.io/name: octopus-underwater-app
-  replicas: 3
+  replicas: 10
   strategy:
     type: RollingUpdate
   template:
